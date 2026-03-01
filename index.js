@@ -27,7 +27,7 @@ client.login(process.env.TOKEN);
 
 // ===== IDS SEPARADOS (IMPORTANTE) =====
 const DISCORD_CHANNEL_ID = "1384310741632286782";
-const YOUTUBE_CHANNEL_ID = "???(no te lo comparto)";
+const YOUTUBE_CHANNEL_ID = "UCKAay8tgsF3tFxD7BWx9XHQ";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
