@@ -57,12 +57,17 @@ async function checkLive() {
       const title = liveVideo.snippet.title;
 
       if (liveId !== lastLiveId) {
-        console.log("🔴 STREAM DETECTADO:");
-        console.log("Título:", title);
-        console.log("Link:", `https://youtube.com/watch?v=${liveId}`);
+  console.log("🔴 STREAM DETECTADO:");
+  console.log("Título:", title);
+  console.log("Link:", `https://youtube.com/watch?v=${liveId}`);
 
-        lastLiveId = liveId;
-      } else {
+  lastLiveId = liveId;
+
+  const canal = client.channels.cache.get(DISCORD_CHANNEL_ID);
+  if (canal) {
+    canal.send(`🔴 ¡Está en vivo!\n**${title}**\nhttps://youtube.com/watch?v=${liveId}`);
+  }
+} else {
         console.log("🟡 Sigue el mismo stream.");
       }
 
