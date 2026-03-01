@@ -25,8 +25,10 @@ client.once("ready", () => {
 
 client.login(process.env.TOKEN);
 
-// ===== YOUTUBE CONFIG =====
-const CHANNEL_ID = "UCKAay8tgsF3tFxD7BWx9XHQ";
+// ===== IDS SEPARADOS (IMPORTANTE) =====
+const DISCORD_CHANNEL_ID = "1384310741632286782";
+const YOUTUBE_CHANNEL_ID = "???(no te lo comparto)";
+
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
 let lastLiveId = null;
@@ -39,7 +41,7 @@ async function checkLive() {
       {
         params: {
           part: "snippet",
-          channelId: CHANNEL_ID,
+          channelId: YOUTUBE_CHANNEL_ID, // 👈 ahora usa el correcto
           eventType: "live",
           type: "video",
           key: API_KEY
